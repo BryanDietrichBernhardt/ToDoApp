@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@400;600&display=swap");
+
+.main-container {
+  display: flow-root;
+  box-sizing: content-box;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(12px, 8rem, 10vw);
+  text-align: center;
+  color: #0984e3;
+  margin: 0.1rem;
+}
+
+ul {
+  padding: 0px;
+  font-family: "Sora", sans-serif;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column; /*direção em colunas v*/
+  width: fit-content; /*tamanho mínimo adequando-se ao conteúdo interno*/
+  max-width: 1200px;
+  margin: auto; /*margem automática (alinhando-se ao centro)*/
+  align-items: flex-start; /*alinhado à esquerda*/
+}
+
+li {
+  width: 100%;
+  margin: 0rem auto;
+}
+
+.taskArea {
+  border: solid 0.1rem #0985e35d;
+  border-radius: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.taskTxt {
+  padding: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row; /*direção em colunas v*/
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+button {
+  box-shadow: inset 0px 1px 0px 0px #103654;
+  background: linear-gradient(to bottom, #0984e3 5%, #003f70 100%);
+  background-color: #0984e3;
+  border-radius: 6px;
+  border: 1px solid #044a80;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #094a2b;
+  min-width: 8vw;
+  min-height: 4vh;
+}
+
+button:hover {
+  filter: opacity(85%);
+}
+
+button:active {
+  position: relative;
+  top: 0.1rem;
+}
+
+input {
+  font-family: "Sora", sans-serif;
+  padding: 0.4rem;
+  font-size: 1rem;
+  border-width: 1px;
+  border-color: #044a80;
+  background-color: #ffffff;
+  color: #000000;
+  border-style: solid;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 9px rgba(139, 139, 139, 0.28);
+  caret-color: #044a80;
+  min-width: 30vw;
+  display: flex;
+  margin: 0 auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+#resetAll {
+  margin: 1rem auto auto auto;
+}
