@@ -1,5 +1,5 @@
 import { Todo } from './../models/todo.model';
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +17,13 @@ export class AppComponent {
     const index = this.todos.indexOf(todo); //Captura o indice do item recebido ou retorna -1 caso não tenha
     if (index !== -1) { //caso tenha encontrado
       this.todos.splice(index, 1); //remove ele da lista com splice(indice, deletar um registro)
+    }
+  }
+
+  update(todo: Todo, input: any) {
+    const index = this.todos.indexOf(todo);
+    if (index !== -1) {
+      todo.title.concat(todo.title, input);
     }
   }
 

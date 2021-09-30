@@ -4,7 +4,7 @@
     <li *ngFor="let todo of todos">
       <div class="taskArea">
         <div class="taskTxt">
-          {{ todo.id }}. <span style="word-break: break-word;" contenteditable="true">{{ todo.title }}</span>
+          {{ todo.id }}. <span #taskTxt style="word-break: break-word;" contenteditable="true" [innerHTML]="todo.title" (input)="update(todo,taskTxt.innerHTML)"></span>
         </div>
         <div class="buttons">
           <button (click)="markAsDone(todo)" *ngIf="!todo.done">Concluir</button>
